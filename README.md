@@ -4,15 +4,26 @@ Four independently trained visual agents play World 1 of Super Mario Bros. The 1
 
 The environment runs on CPU and PyTorch can train the network on Apple Silicon using MPS. See [Training and experiments](docs/training.md) for the PPO recipe, reward comparison, and 1-3 method.
 
-## Setup
+## Quick start
 
-Use macOS on Apple Silicon with Python 3.11. From the repository root:
+Use macOS on Apple Silicon with Python 3.11. Clone the repository, install the environment, and run the four trained agents:
 
 ```bash
+git clone https://github.com/Staudinger0325/mario-rl-apple-silicon.git
+cd mario-rl-apple-silicon
 MARIO_PYTHON=python3.11 ./setup.sh
+.venv/bin/python scripts/play_world1.py
 ```
 
-The script creates `.venv`, installs the dependencies, and runs a device and environment check. To check again or test a window:
+`setup.sh` creates `.venv`, installs the pinned dependencies, and checks the device and game environment. The pinned `gym-super-mario-bros==7.4.0` distribution includes the game assets used by this environment, so the standard setup requires no manual ROM-copying step.
+
+The player opens a window and runs levels 1-1 through 1-4, loading each level's model from `weights/` for CPU inference. No training is required. To run all four levels without a window:
+
+```bash
+.venv/bin/python scripts/play_world1.py --headless
+```
+
+To repeat the environment check or test a window:
 
 ```bash
 .venv/bin/python -m mario_rl doctor
