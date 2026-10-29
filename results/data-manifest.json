@@ -1,0 +1,101 @@
+{
+  "schema": "mario-published-learning-curves-v1",
+  "files": [
+    {
+      "path": "learning-curves/ablation/full/evaluation.csv",
+      "sha256": "762a41ee5b150ac1cfd65c3abe50ed15fdbcad835505f110bd478f05af3b68e7",
+      "bytes": 73133
+    },
+    {
+      "path": "learning-curves/ablation/full/metrics.csv",
+      "sha256": "e1e45c5d6fc563ede12a1942a5d2dad7c801fb8ff4cea94a3f41b6a7bc28f465",
+      "bytes": 1061428
+    },
+    {
+      "path": "learning-curves/ablation/native/evaluation.csv",
+      "sha256": "9437e19206c2896968dcacc455cb3a7bbc6dc161a1864346499e5c6a963ef9b0",
+      "bytes": 72722
+    },
+    {
+      "path": "learning-curves/ablation/native/metrics.csv",
+      "sha256": "f8f07a3caadba25b988afbd773e2e08e017e2a8f48c97d4e07e59f67b5e09e7b",
+      "bytes": 1061471
+    },
+    {
+      "path": "learning-curves/ablation/progress_score/evaluation.csv",
+      "sha256": "97802e35640566cc37555182a5049f358580eb57d48bb9f01c6aad2bc2e0feba",
+      "bytes": 72724
+    },
+    {
+      "path": "learning-curves/ablation/progress_score/metrics.csv",
+      "sha256": "2dffed742493a7b8cc6f5400f8937616d41b9bbd0870490d7f7cce1a8baf51ba",
+      "bytes": 1063394
+    },
+    {
+      "path": "learning-curves/ablation/progress_terminal/evaluation.csv",
+      "sha256": "a07f8c496153f9c3ad9f8bee519796c8a7f1cff3346f6a8aa49e1099cfea019b",
+      "bytes": 73185
+    },
+    {
+      "path": "learning-curves/ablation/progress_terminal/metrics.csv",
+      "sha256": "a288ced1ea41439dce26cc5acc2986478e5a00e1df090cb0b7ae3414988da4d1",
+      "bytes": 1060108
+    },
+    {
+      "path": "learning-curves/bc/bc-metrics.csv",
+      "sha256": "67e51a6824843c7ae23aba9c7b26754008c9fc5fa93b605b5219ec875be05127",
+      "bytes": 19753
+    },
+    {
+      "path": "learning-curves/bc/ppo-evaluation.csv",
+      "sha256": "1e1d6af302ef92929d163fc663ef073ab0b7484ff0300784354c2563b6c6db87",
+      "bytes": 2538
+    },
+    {
+      "path": "learning-curves/ppo/1-1-seed42/evaluation.csv",
+      "sha256": "abfa38a4182f709b988747e306a7731df221940f38348a0106c6d97ed464e4b5",
+      "bytes": 47461
+    },
+    {
+      "path": "learning-curves/ppo/1-1-seed42/metrics.csv",
+      "sha256": "19fc577f82bea9c1dacf7ad1b18c0e3ad4ecc2b68fc1c42afad6166b95c43408",
+      "bytes": 677529
+    },
+    {
+      "path": "learning-curves/ppo/1-2-seed42/evaluation.csv",
+      "sha256": "b156e9fd0aed39251d324b8c960daacb407d08ff6e7ee989348b20d6b853b0fe",
+      "bytes": 35944
+    },
+    {
+      "path": "learning-curves/ppo/1-2-seed42/metrics.csv",
+      "sha256": "4a8eaacc9d9f7279b8810970ca951b342cb9a41373c2c7c1f32f8070059ace86",
+      "bytes": 506140
+    },
+    {
+      "path": "learning-curves/ppo/1-4-seed42/evaluation.csv",
+      "sha256": "004cbedf2a1d78c67859990733811ea67443f00dc7be14dc2b369639c3248262",
+      "bytes": 7510
+    },
+    {
+      "path": "learning-curves/ppo/1-4-seed42/metrics.csv",
+      "sha256": "aded323206391c8bdfe1b2b25c59505ffba6d2ddded41a91ef803e4684f25960",
+      "bytes": 97843
+    },
+    {
+      "path": "ablation-seed42.csv",
+      "sha256": "060cb992791b81a708b8e22e084a91a622147984a2f9eb72361982b639a383b2",
+      "bytes": 641
+    },
+    {
+      "path": "world1-evaluation.csv",
+      "sha256": "cdefe280550dbd80eb4373c69806c19f83c302ff2c927e417fe0bcd565a27e5f",
+      "bytes": 956
+    }
+  ],
+  "notes": [
+    "CSV files copied without changing numerical values.",
+    "Training returns are recorded rolling means over at most 100 complete episodes within each training segment.",
+    "Resume boundaries reset environments and the rolling window.",
+    "Periodic evaluations describe different checkpoints."
+  ]
+}

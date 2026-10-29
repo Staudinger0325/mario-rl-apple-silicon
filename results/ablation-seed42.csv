@@ -1,0 +1,5 @@
+mode,training_seed,sampled_decisions,first_clear_step,first_three_consecutive_clears_step,periodic_clears,periodic_evaluations,last_ten_clears,endpoint_clears,endpoint_episodes,endpoint_raw_return,endpoint_decisions,optimizer_steps,minibatch_sample_exposures,discarded_rollout_decisions,resume_count
+native,42,5242880,2719744,3440640,55,159,10,1,1,3066.0,278.0,78024,19974144,0,1
+progress_terminal,42,5242880,3244176,4161680,24,159,8,1,1,3064.0,288.0,77488,19836352,144,1
+progress_score,42,5242880,2654208,3145728,62,160,9,1,1,3067.0,275.0,78116,19997696,0,0
+full,42,5242880,2523136,3342336,59,160,7,1,1,3067.0,275.0,77964,19958784,0,0

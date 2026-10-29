@@ -1,0 +1,21 @@
+# Local environments and generated files
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.DS_Store
+build/
+dist/
+*.egg-info/
+outputs/
+output/
+runs/
+registrations/
+tmp/
+.publish-staging/
+*.log
+# Reports and local launchers are deliberately not published.
+*.command
+*.pdf
+*.tex
+*.zip

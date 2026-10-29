@@ -1,0 +1,244 @@
+{
+  "schema": "world1-local-state-dicts-v1",
+  "scope": "Four independent World 1 policies; not a single-policy continuous run",
+  "observation_shape": [
+    4,
+    84,
+    84
+  ],
+  "observation_dtype": "float32 in [0,1]",
+  "action_set": "simple7",
+  "actions": [
+    [
+      "NOOP"
+    ],
+    [
+      "right"
+    ],
+    [
+      "right",
+      "A"
+    ],
+    [
+      "right",
+      "B"
+    ],
+    [
+      "right",
+      "A",
+      "B"
+    ],
+    [
+      "A"
+    ],
+    [
+      "left"
+    ]
+  ],
+  "reward_mode": "full",
+  "castle_path_rules": false,
+  "model_architecture": "ActorCritic: four 32-channel 3x3 stride-2 convolutions, 512-unit linear layer, seven-action actor and scalar critic",
+  "model_inputs": "Pixels only at inference",
+  "models": [
+    {
+      "level": "1-1",
+      "world": 1,
+      "stage": 1,
+      "path": "world1-1-ppo.pt",
+      "format": "plain_state_dict",
+      "sha256": "c37dfb83b688def9d3def2e9599018817a24224e716c7c0f57240beb769867a0",
+      "bytes": 2498182,
+      "model_sha256": "dfae9c0f4b97b4a280a6a67e5d3d75d66010920db25a1a307415d809a042ade4",
+      "original_checkpoint_sha256": "269675520a6f4584a7c289dfed926e2fc59b7768f4e5e0072928297e7699dd3b",
+      "initial_model_sha256": "433d171c1e53a0fedf36b82feff9cbb07f798c9b515175e0bc7bb95777c4455e",
+      "training_seed": 42,
+      "method": "ppo",
+      "method_description": "PPO from random initialization",
+      "initialization": "Fresh random CNN; no imported pretrained weights",
+      "selected_ppo_decisions": 3376128,
+      "validation": {
+        "wins": 5,
+        "episodes": 5,
+        "device": "cpu",
+        "action_selection": "argmax",
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "fresh_env_per_episode": true,
+        "fixed_start_map": true,
+        "max_steps": 3000,
+        "steps_each": [
+          283,
+          283,
+          283,
+          283,
+          283
+        ],
+        "raw_returns_each": [
+          3065.0,
+          3065.0,
+          3065.0,
+          3065.0,
+          3065.0
+        ],
+        "original_receipt_sha256": "39dd08bb38ae15be19e8ee18b2164230ae59e2b64eb16c38f571881cfd7d1291"
+      }
+    },
+    {
+      "level": "1-2",
+      "world": 1,
+      "stage": 2,
+      "path": "world1-2-ppo.pt",
+      "format": "plain_state_dict",
+      "sha256": "e5d518b6ef98f83ad5ec097451526200a637182e47fca5caa4535570155b0962",
+      "bytes": 2498182,
+      "model_sha256": "b8a7f75eecac09ed2b257cbd9a008d84fb46e883478ac32b4fee15220edc2020",
+      "original_checkpoint_sha256": "0817b4d5ba4b5348ea8d6bc6b3f325e31ef96569e02ed8046826c83bf428488a",
+      "initial_model_sha256": "433d171c1e53a0fedf36b82feff9cbb07f798c9b515175e0bc7bb95777c4455e",
+      "training_seed": 42,
+      "method": "ppo",
+      "method_description": "PPO from random initialization",
+      "initialization": "Fresh random CNN; no imported pretrained weights",
+      "selected_ppo_decisions": 2491392,
+      "validation": {
+        "wins": 5,
+        "episodes": 5,
+        "device": "cpu",
+        "action_selection": "argmax",
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "fresh_env_per_episode": true,
+        "fixed_start_map": true,
+        "max_steps": 3000,
+        "steps_each": [
+          285,
+          285,
+          285,
+          285,
+          285
+        ],
+        "raw_returns_each": [
+          2835.0,
+          2835.0,
+          2835.0,
+          2835.0,
+          2835.0
+        ],
+        "original_receipt_sha256": "9eadfa4c09818e9f817368017696b0712b1d1caec364a6977f980fd9de477e58"
+      }
+    },
+    {
+      "level": "1-3",
+      "world": 1,
+      "stage": 3,
+      "path": "world1-3-bc.pt",
+      "format": "plain_state_dict",
+      "sha256": "94d3e48503811fc770124ebff9b2794a33113d81b7b921b3f11260e224861c03",
+      "bytes": 2498164,
+      "model_sha256": "abdc66fe3ce837f4cef3e991021cf9d369e5815c5815f25128afbe9422853a8a",
+      "original_checkpoint_sha256": "a2fc069ab5a9dc1e21d6547845abe102a702e925a7aee666c5ef80854c50a6d5",
+      "initial_model_sha256": "433d171c1e53a0fedf36b82feff9cbb07f798c9b515175e0bc7bb95777c4455e",
+      "training_seed": 42,
+      "method": "own_search_bc",
+      "method_description": "Own reward-guided search -> fresh random CNN -> own-trajectory BC; no PPO in this passing checkpoint",
+      "initialization": "Fresh random CNN; no imported pretrained weights",
+      "selected_ppo_decisions": 0,
+      "validation": {
+        "wins": 5,
+        "episodes": 5,
+        "device": "cpu",
+        "action_selection": "argmax",
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "fresh_env_per_episode": true,
+        "fixed_start_map": true,
+        "max_steps": 3000,
+        "steps_each": [
+          439,
+          439,
+          439,
+          439,
+          439
+        ],
+        "raw_returns_each": [
+          2298.0,
+          2298.0,
+          2298.0,
+          2298.0,
+          2298.0
+        ],
+        "original_receipt_sha256": "e90dc8eabfc7a8dc8748946133bc334771a65bcb657a7a2893dd2f494089d236"
+      },
+      "selected_bc_epoch": 113,
+      "bc_optimizer_steps": 791,
+      "bc_gradient_sample_presentations": 49607,
+      "own_trajectory_examples": 439,
+      "own_search_environment_decisions": 345780
+    },
+    {
+      "level": "1-4",
+      "world": 1,
+      "stage": 4,
+      "path": "world1-4-ppo.pt",
+      "format": "plain_state_dict",
+      "sha256": "e2ab18cc0468cdd1c61561fa6918ca7cb52269caa894f1d683befac247f766bd",
+      "bytes": 2498182,
+      "model_sha256": "4ae420128bd391aabaac60292eb501d0c64f1d3deec70a978ee437962fc66409",
+      "original_checkpoint_sha256": "5bf6f0bcd132679747889cc80467adbd62c5b21837aabf1c5c532d26bd64eec4",
+      "initial_model_sha256": "433d171c1e53a0fedf36b82feff9cbb07f798c9b515175e0bc7bb95777c4455e",
+      "training_seed": 42,
+      "method": "ppo",
+      "method_description": "PPO from random initialization",
+      "initialization": "Fresh random CNN; no imported pretrained weights",
+      "selected_ppo_decisions": 458752,
+      "validation": {
+        "wins": 5,
+        "episodes": 5,
+        "device": "cpu",
+        "action_selection": "argmax",
+        "seeds": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "fresh_env_per_episode": true,
+        "fixed_start_map": true,
+        "max_steps": 3000,
+        "steps_each": [
+          189,
+          189,
+          189,
+          189,
+          189
+        ],
+        "raw_returns_each": [
+          2181.0,
+          2181.0,
+          2181.0,
+          2181.0,
+          2181.0
+        ],
+        "original_receipt_sha256": "e89ef3988e347ecb8b647ea1914e64fa47ed946972402ab18c1d64fa946b2a45"
+      }
+    }
+  ],
+  "historical_validation_note": "Each selected original model passed five independent fresh-environment CPU argmax trials from a fixed level start. Repeated fixed-start trials are not random-map or cross-level generalization tests. The release contains an integrity-checked summary, not the private original receipt files. New evaluations are recorded separately.",
+  "export_note": "All tensors exactly equal the accepted original models. Optimizer, RNG, training snapshots, private paths and experiment metadata were removed from the weight files.",
+  "download_policy": "No automatic download; the repository supplies these local models."
+}

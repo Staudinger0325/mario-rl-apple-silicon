@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mario-rl-apple-silicon"
+version = "1.0.0"
+description = "Reproducible PPO Mario project with native Apple Silicon support"
+requires-python = ">=3.11,<3.12"
+dynamic = ["dependencies"]
+
+[project.scripts]
+mario-rl = "mario_rl.__main__:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["mario_rl*"]
